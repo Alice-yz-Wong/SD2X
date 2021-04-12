@@ -1,0 +1,61 @@
+Software Design Note
+
+- no silver bullet: no one thing solve all problems
+
+- Five steps to design software
+    - 1. Domain/class modeling
+    - 2. architecture
+    - 3. data structure
+    - 4. design pattern
+    - 5. modify design pattern
+- 1. Domain modeling
+    - identify classes
+    - properties
+    - behavior
+    - relationship
+
+- Example of grammatical parsing: grad and undergrad may apply,an application consists personal statment and recommendation letter
+    - grammatical parsing
+        Noun, class   adj. attributes    v. behavior
+        Nouns: students program application letter statement
+        adj: grad, undergrad
+        v. apply, consist
+
+        Noun.  should be class if contain mul attributes
+        adj. subclass , if have operations 
+        v. apply, go to student class
+
+        Class: student
+        attributes: graduate/ undergrad
+        operations apply
+        Class: letter
+        Class: statement
+        Class: application
+        Class: program
+
+
+
+- UML unified modeling language
+        - structure diagram
+        - behavior diagram 
+UML diagram     
+- is-a relationship
+        generalization, student is person, java: student extends person
+        realization, dog is animal, java: dog implement animal
+    
+- has-a relationship(java doesnt' differentiate between them)
+        aggregation, one class is part of another and can exist independently, eg, school is a building
+        composition, one class is part of another and can not exist independently, eg, school and student
+
+- "uses"  relationship
+        dependency, A use B but B is not part of A
+        in java, B is a parameter, or local variable in A, not a field
+
+- multiplicity, n: exact n object,  *:0 or more object   m..n: min m max n
+- 
+
+
+
+    
+
+
