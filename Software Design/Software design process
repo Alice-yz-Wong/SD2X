@@ -1,6 +1,6 @@
 Software Design Note
 
-- no silver bullet: no one thing solve all problems
+- no silver bullet: no one solution solve all problems
 
 - Five steps to design software
     - 1. Domain/class modeling
@@ -8,6 +8,7 @@ Software Design Note
     - 3. data structure
     - 4. design pattern
     - 5. modify design pattern
+    
 - 1. Domain modeling
     - identify classes
     - properties
@@ -52,7 +53,7 @@ UML diagram
         in java, B is a parameter, or local variable in A, not a field
 
 - multiplicity, n: exact n object,  *:0 or more object   m..n: min m max n
-- 
+- Detailed UML: Field(attributes),Method(operations), Named relationships,multiplicity
 
 
 

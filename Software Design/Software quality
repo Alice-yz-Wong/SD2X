@@ -1,0 +1,28 @@
+- perspective on quality:
+    transcendental,user,manufacturer, product, value-based
+- External quality:executable program
+    functionality, reliability,usability,efficiency,portability,security
+  Internal quality: readable
+    maintainability: analizability, changeablitiy, stability, testability
+
+Internal quality 
+    - analyzability:  read understand the code
+    - changeability: 
+    - stablity: tolerant of changes to other part of code
+    - testability:
+
+Three tier architecture:
+    presentation: get input from user, display output
+    logic: Perform claculation, make decisions
+    data: store and retrieve data
+
+Software design concept:
+    modularity, each component-single functionality
+    functional independence
+    abstraction
+
+Coupling
+    - loose Coupling: one depends on another
+    - tight Coupling: both depend on each other
+
+
