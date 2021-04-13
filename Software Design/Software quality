@@ -25,4 +25,9 @@ Coupling
     - loose Coupling: one depends on another
     - tight Coupling: both depend on each other
 
+abstraction: for stability and reusability
+    - interfaces, a class should have a dependency on an interface without needing to know what class implements interface
+    - Abstract data type: set list map in collection API
+    - Design pattern: observer
+
 

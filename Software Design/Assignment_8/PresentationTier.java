@@ -1,21 +1,45 @@
-/*
- * SD2x Homework #8
- * This class represents the Presentation Tier in the three-tier architecture.
- * Implement the appropriate methods for this tier below. 
- * Also implement the start method as described in the assignment description.
- */
+import java.util.Scanner;
+import java.util.Set;
 
 public class PresentationTier {
 	
 	private LogicTier logicTier; // link to the Logic Tier
-	
+	private Scanner scanner=new Scanner(System.in);
+
 	public PresentationTier(LogicTier logicTier) {
 		this.logicTier = logicTier;
 	}
 	
+
 	public void start() {
-		
-		/* IMPLEMENT THIS METHOD */
+		System.out.println("Would you want to find book titles by author or find number of books in year? Please type in 1 for finding book titles by author and type in 2 for find number of books in year.")
+		String input=scanner.nextLine();
+		if(input.equals("1")){
+			showBookTitlesByAuthor();
+		}else if(input.equals("2")){
+			showNumberOfBooksInYear();
+		}else{
+			System.out.println("out of bound error");
+		}
+
+	}
+	
+	public void showBookTitlesByAuthor(){
+		System.out.println("which author");
+		String author=scanner.nextLine();
+		Set<String> books=logicTier.findBookTitlesByAuthor(author);
+		System.out.println("Books by"+author+" : ");
+		for(String book:books){
+			System.out.println(book);
+		}
+	}
+
+
+	public void showNumberOfBooksInYear(){
+		System.out.println("which year");
+		String year=scanner.nextLine();
+		int booknum=logicTier.findNumberOfBooksInYear(Integer.parseInt(year));
+		System.out.println("There are "+booknum+" in "+year);
 	}
 	
 

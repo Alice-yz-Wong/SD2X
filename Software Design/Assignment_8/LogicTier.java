@@ -1,8 +1,6 @@
-/*
- * SD2x Homework #8
- * This class represents the Logic Tier in the three-tier architecture.
- * Implement the appropriate methods for this tier below.
- */
+import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LogicTier {
 	
@@ -12,5 +10,29 @@ public class LogicTier {
 		this.dataTier = dataTier;
 	}
 	
+	
+	public Set<String> findBookTitlesByAuthor(String author){
+		Set<String> titles=new HashSet<>();
+		List<Book> books=dataTier.getAllBooks();
+		for(Book book:books){
+			if(book.getArthor().contains(author)){
+				titles.add(book.getTitle());
+			}
+		}
+		return titles;
+	}
+
+
+	public int findNumberOfBooksInYear(int year){
+		List<Book> books=dataTier.getAllBooks();
+		int counter=0;
+
+		for(Book book:books){
+			if(book.getPublicationYear()==year){
+				counter++;
+			}
+		}
+		return counter;
+	}
 
 }

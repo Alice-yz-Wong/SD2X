@@ -1,0 +1,20 @@
+UI
+    - language change
+    - prompts
+    - mechanism for input
+    - format of output
+    - UI tech
+    - error message display
+
+Logic layer:
+    - what to search for
+    - logic of search
+    - detail in searching
+    - error message
+
+File Reader:
+    - fileformat: csv json xml
+    - layout, order
+    - source, file database
+    - error handling
+
