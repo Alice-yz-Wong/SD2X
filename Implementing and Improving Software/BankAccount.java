@@ -1,4 +1,12 @@
 public class BankAccount {
+    private double balance=0;
+    public void setBalance(double amount){
+        balance=amount;
+    }
+    public double getBalance(){
+        return balance;
+    }
+    
     public static final int NULL_ARGUMENT=-1;
     public static final int NEGATIVE_BALANCE=-2;
     public static final int SUCCESS=0;
