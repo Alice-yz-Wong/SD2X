@@ -73,6 +73,22 @@ Tricks for improving efficiency
 - use java api, arr
 - memorization, save input-result as HashSet
 
+Thread-level parallelism:
+- THread, separate line of execution in the same process
+
+- each thread has its own :stack(local variable, method), program counter(address of next instruction)
+- thread in the same process: heap, objects stored. static/global variable
+
+Thread java api:
+java.lang.Thread   start run 
+eg: finding sum of an array
+
+synchronize:
+need to synchronize execution of two thread: no other thread will replace the object when one thread is execute the same object 
+No need to synchronize the whole object, can synchronize one block
+
+
+
 
 
 
