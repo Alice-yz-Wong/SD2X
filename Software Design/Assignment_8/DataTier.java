@@ -1,16 +1,13 @@
 import java.util.Scanner;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
-/*
- * SD2x Homework #8
- * This class represents the Data Tier in the three-tier architecture.
- * Implement the appropriate methods for this tier below.
- */
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class DataTier {
 	
 	private String fileName; // the name of the file to read
-	private Scanner scanner = new Scanner(System.in);
 
 	public DataTier(String inputSource) {
 		fileName = inputSource;
@@ -19,7 +16,7 @@ public class DataTier {
 	
 	public List<Book> getAllBooks(){
 		List<Book> books = new ArrayList<>();
-		List<String> lines = null;
+		List<String> lines = new ArrayList<>();
 		
 		try {
 			lines = Files.readAllLines(Paths.get(fileName));

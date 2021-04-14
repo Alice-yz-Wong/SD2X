@@ -30,4 +30,8 @@ abstraction: for stability and reusability
     - Abstract data type: set list map in collection API
     - Design pattern: observer
 
+law of demeter
+    - don't talk to stranger
+    - hide delegate pattern
+    
 

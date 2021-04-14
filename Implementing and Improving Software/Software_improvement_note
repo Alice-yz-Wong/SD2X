@@ -1,0 +1,83 @@
+SDLC(software develop life cycle)
+-Waterfall, software process model
+    requirement-design-implementation-verification-maintenance
+-RUB, inception-elaboration-construction-transition
+-Agile, plan-collaborate-deliver
+
+Make code easier to read
+- use white space
+- short identifier
+- variation between identifier
+- use meaningful identifier names
+- book reference, art of readable code
+    use download/calculate instead of get
+    attached detail
+- use identation
+
+Java convention:
+- class/interface names , nouns. start with capital letter, capitlize first letter of each internal word
+- method should be v. , start with lower case
+- field and variables: nouns.  start with lower case
+
+
+
+Refactoring
+- constantly changing in Agile model
+- do test for every change
+
+Duplication: understandability, changeability, testability
+- extract method, 
+- extract super class, two classes have duplicate code
+
+Large class
+- Extract class
+person class -person related  -has an address related function
+Student  - name related  -course   -
+
+
+
+External quality, reliability
+- fault prevention
+- fault removal
+- fault tolerance
+
+- defensive programming, not sure how other will use the code
+
+notify the caller: error code, unchecked exception, checked exception, assertion
+Examples check BankAccount.Java
+Exceptions vs assertion: exception for things shound not happen, assertion for sth should never happen
+
+
+
+More efficiency:
+usually there is trade off: understandability, functionality, reliability, security, memory usage, size, compile time
+
+rule of thumb:
+- use right algorithm and data structure
+- make common case fast
+- measure don't guess
+- avoid unnecessary work
+
+Data structure
+- List, order element, allow duplicates
+LinkedList, ArrayList(indexbased access)
+- Sets, unordered, no duplicates
+HashSet, array of linked List
+TreeSet, O(Logn)
+
+Tricks for improving efficiency
+- don't use exception unnecessary
+- don't check condition unnecessarily
+- use local variable instead of calling method unnecessarily
+- reuse expression when possible
+- use java api, arr
+- memorization, save input-result as HashSet
+
+
+
+
+
+
+
+
+

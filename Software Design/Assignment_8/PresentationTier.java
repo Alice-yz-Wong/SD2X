@@ -12,7 +12,7 @@ public class PresentationTier {
 	
 
 	public void start() {
-		System.out.println("Would you want to find book titles by author or find number of books in year? Please type in 1 for finding book titles by author and type in 2 for find number of books in year.")
+		System.out.println("Would you want to find book titles by author or find number of books in year? Please type in 1 for finding book titles by author and type in 2 for find number of books in year.");
 		String input=scanner.nextLine();
 		if(input.equals("1")){
 			showBookTitlesByAuthor();
