@@ -27,11 +27,11 @@ public class PlagiarismDetector {
 		Map<String, Integer> numberOfMatches = new HashMap<String, Integer>();
 		
 		//Store phase 1 time in hashmap
-		Map(String, Set<String>) =new HashMap<>();
+		Map<String, Set<String>> filePhrases =new HashMap<>();
 
 		for(String file:files){
 			if(file!=null){
-				filePhases.put(file, createPhrases(dirName + "/" + file, windowSize));
+				filePhrases.put(file, createPhrases(dirName + "/" + file, windowSize));
 			}
 		}
 
@@ -52,7 +52,7 @@ public class PlagiarismDetector {
 								
 				if (matches.size() > threshold) {
 					String key = file1 + "-" + file2;
-					numberOfMatches.put(key,matches.size();
+					numberOfMatches.put(key,matches.size());
 				}				
 			}
 			
@@ -70,7 +70,7 @@ public class PlagiarismDetector {
 	protected static List<String> readFile(String filename) {
 		if (filename == null) return null;
 		
-		List<String> words = new ArrayList()<String>();
+		List<String> words = new ArrayList<String>();
 		
 		try {
 			Scanner in = new Scanner(new File(filename));
@@ -137,33 +137,15 @@ public class PlagiarismDetector {
 	 * are sorted according to the value of the Integer, in non-ascending order.
 	 */
 	protected static LinkedHashMap<String, Integer> sortResults(Map<String, Integer> possibleMatches) {
-		
-		// Because this approach modifies the Map as a side effect of printing 
-		// the results, it is necessary to make a copy of the original Map
-		Map<String, Integer> copy = new HashMap<String, Integer>();
 
-		for (String key : possibleMatches.keySet()) {
-			copy.put(key, possibleMatches.get(key));
-		}	
-		
-		LinkedHashMap<String, Integer> list = new LinkedHashMap<String, Integer>();
+        List<Map.Entry<String, Integer>> list = new LinkedList<>(possibleMatches.entrySet());
+        list.sort((o1, o2) -> (o2.getValue()).compareTo(o1.getValue()));
 
-		for (int i = 0; i < copy.size(); i++) {
-			int maxValue = 0;
-			String maxKey = null;
-			for (String key : copy.keySet()) {
-				if (copy.get(key) > maxValue) {
-					maxValue = copy.get(key);
-					maxKey = key;
-				}
-			}
-			
-			list.put(maxKey, maxValue);
-			
-			copy.put(maxKey, -1);
-		}
-
-		return list;
+        LinkedHashMap<String, Integer> result = new LinkedHashMap<>();
+        for (Map.Entry<String, Integer> entry : list) {
+            result.put(entry.getKey(), entry.getValue());
+        }
+        return result;
 	}
 	
 	/*
